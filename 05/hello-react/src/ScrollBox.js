@@ -7,7 +7,9 @@ class ScrollBox extends Component {
     const scrollHeight = this.box.scrollHeight;
     const clientHeight = this.box.cliengHeight;
     */
-    this.box.scrollTop = scrollHeight - clientHeight;
+    // this.box.scrollTop = scrollHeight - clientHeight; // 왜 굳이 이걸 쓰지? scrollHeight만 해도 맨 아래로 가는데...
+    this.box.scrollTop = scrollHeight
+
   };
 
   render() {
