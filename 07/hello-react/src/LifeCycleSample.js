@@ -35,10 +35,14 @@ class LifeCycleSample extends Component {
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
+      console.log(prevProps.color, this.props.color, this.myRef.style.color)
+      // 굳이 이렇게 칼러를 받아야 하나? prevPros.color가 있지 않나? 샾형식 말로 rgb() 형식으로 받고 싶어서?
       return this.myRef.style.color;
+
     }
     return null;
   }
+  // getSnapshotBeforeUpdate에서 return이 있으면 여기서 snapshot 값이다.
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('componentDidUpdate', prevProps, prevState);
     if (snapshot) {
@@ -54,6 +58,7 @@ class LifeCycleSample extends Component {
       <div>
         {/* {this.props.missing.value} */}
         <h1 style={style} ref={ref => (this.myRef = ref)}>
+          {/* <h1 style={style}> */}
           {this.state.number}
         </h1>
         <p>color: {this.state.color}</p>

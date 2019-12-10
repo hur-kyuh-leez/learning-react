@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 const Say = () => {
   const [message, setMessage] = useState('');
+  // if you want to use set default datatype to accept...
+  // const [user, setUser] = useState<IUser>({name: 'Jon'});
+  // https://stackoverflow.com/questions/53650468/set-types-on-usestate-react-hook-with-typescript
+
   const onClickEnter = () => setMessage('안녕하세요!');
   const onClickLeave = () => setMessage('안녕히 가세요!');
 
-  const [color, setColor] = useState('black');
+  const [color, setColor] = useState('gray');
 
   return (
     <div>

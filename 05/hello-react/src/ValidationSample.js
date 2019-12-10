@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ValidationSample.css';
 class ValidationSample extends Component {
   input = React.createRef();
+
   state = {
     password: '',
     clicked: false,

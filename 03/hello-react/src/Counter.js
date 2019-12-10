@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Counter extends Component {
   state = {
     number: 0,
-    fixedNumber: 0
+    fixedNumber: 7
   };
   render() {
     const { number, fixedNumber } = this.state; // state 를 조회 할 때에는 this.state 로 조회합니다.
